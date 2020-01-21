@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "06e2e98f-6745-43eb-99a0-5533c823117a",
+            "Value": {
+                "id": "347b7ca4-5502-4941-9f53-d089b9c6c3f8",
+                "resourcePath": "sprites\\sprCentipede\\sprCentipede.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "07b3e625-0344-4fc9-a439-570bef9ed118",
             "Value": {
                 "id": "44601aa5-5ed8-4971-966c-4e909b93a6a6",
@@ -100,6 +108,14 @@
                 "id": "e6d99b7f-3173-4a0c-9d27-794e8103e00c",
                 "resourcePath": "views\\4ddf018a-2283-4e37-839c-82b5521822cd.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "4e35c5ee-21c4-43d4-80e7-82992697d832",
+            "Value": {
+                "id": "b7984513-d8b9-401d-8d54-221e42854b2f",
+                "resourcePath": "sprites\\sprPlayerTracks\\sprPlayerTracks.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -215,6 +231,14 @@
             }
         },
         {
+            "Key": "bf110325-2d3f-47a7-937c-49b1c4599acb",
+            "Value": {
+                "id": "464c2462-735e-4c84-b339-aeda4d0b929c",
+                "resourcePath": "objects\\objCentipedePart\\objCentipedePart.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "cc8a05c0-3b18-4b59-a85e-73f7e7e6a7ad",
@@ -236,6 +260,22 @@
                 "id": "7b8d6a91-8b30-4a32-bf63-c1d6062aa2be",
                 "resourcePath": "views\\d5497da1-558b-47e3-8603-03f294e89ea4.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "deaaedb1-2644-41eb-bb7f-543d7e6650be",
+            "Value": {
+                "id": "ca68aaf1-cee0-4826-a880-d54ce71b2e24",
+                "resourcePath": "sprites\\sprPlayerTurretOutline\\sprPlayerTurretOutline.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e0d0983d-670e-4c1d-9a5b-ef7e5ae09c45",
+            "Value": {
+                "id": "fd86c1be-9a96-49b3-92db-29505a708823",
+                "resourcePath": "objects\\objCentipede\\objCentipede.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -292,6 +332,14 @@
                 "id": "df0711ac-016a-4e23-8d4c-04d3770a0a5c",
                 "resourcePath": "options\\mac\\options_mac.yy",
                 "resourceType": "GMMacOptions"
+            }
+        },
+        {
+            "Key": "fa8cd2c4-c3bd-4589-9f43-de0300ad5549",
+            "Value": {
+                "id": "00229e80-34ff-4b95-81da-c24f36dfb99d",
+                "resourcePath": "views\\fa8cd2c4-c3bd-4589-9f43-de0300ad5549.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
