@@ -6,8 +6,8 @@ if(instance_exists(objMainMenu))
 }
 else if(instance_exists(objPlayer))
 {
-	CameraX = lerp(CameraX, objPlayer.x - (ScreenWidth / 2), 0.2);
-	CameraY = lerp(CameraY, objPlayer.y - (ScreenHeight/ 2), 0.2);
+	CameraX = objPlayer.x - (ScreenWidth / 2);
+	CameraY = objPlayer.y - (ScreenHeight/ 2);
 }
 
 
