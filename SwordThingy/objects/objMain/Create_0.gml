@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+globalvar Score;
+Score = 0;
+
 globalvar ScreenScale, ScreenWidth, ScreenHeight;
 ScreenScale = 2;
 ScreenWidth = 1920 / 3;
