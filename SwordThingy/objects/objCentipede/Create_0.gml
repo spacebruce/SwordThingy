@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+Damage = 10;
+
 Health = 100;
 HurtFrames = -1;
 

@@ -1,5 +1,11 @@
-SpeedX = 0;
-SpeedY = 0;
+
+HurtFrames = -1;
+
+MaxHealth = 100;
+Health = MaxHealth;
+
+Speed = 0;
+Direction = 90;
 
 ShootCooldown = -1;
 GunTipX = x;

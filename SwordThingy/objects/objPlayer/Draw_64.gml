@@ -1,8 +1,4 @@
 /// @description Insert description here
 // You can write your code in this editor
-HurtFrames -= 1 / room_speed;
-
-if (Health < 0)
-{
-	instance_destroy();
-}
+var t = "";
+draw_text(0, 0, t);

@@ -1,91 +1,58 @@
 ///Input
+HurtFrames -= 1 / room_speed;
 ShootCooldown -= 1 / room_speed;
 
 var Shoot = false;
 var Horizontal = 0, Vertical = 0;
+var TurretMove = false;
 
 var turretDir = ShootDirection;
 if gamepad_is_connected(0)
 {
-	Horizontal = gamepad_axis_value(0, gp_axislh)
-	Vertical = gamepad_axis_value(0, gp_axislv)
-	if(point_distance(0, 0, Horizontal, Vertical) < 0.3)
-	{
-		Horizontal = 0;
-		Vertical = 0;
-	}
-	var ShootHor = gamepad_axis_value(0, gp_axislh)
-	var ShootVer = gamepad_axis_value(0, gp_axislv)
-	if(point_distance(0, 0, ShootHor, ShootVer) < 0.3)
-	{
-		ShootHor = 0;
-		ShootVer = 0;
-	}
+	Horizontal = gamepad_axis_value(0, gp_axislh);
+	Vertical = gamepad_axis_value(0, gp_axislv);
+	var ShootHor = gamepad_axis_value(0, gp_axisrh);
+	var ShootVer = gamepad_axis_value(0, gp_axisrv);
+	TurretMove = (point_distance(0, 0, ShootHor, ShootVer) > 0.5);
 	turretDir = point_direction(0, 0, ShootHor, ShootVer);
-	
-	Shoot = (gamepad_button_check(0, gp_face1));
+	Shoot = gamepad_button_check(0, gp_face1) || gamepad_button_check(0, gp_shoulderrb) || gamepad_button_check(0, gp_shoulderr);
 } 
 else
 {
 	Horizontal = keyboard_check(vk_right) - keyboard_check(vk_left);
 	Vertical = keyboard_check(vk_down) - keyboard_check(vk_up);
 	turretDir = point_direction(window_get_width() / 2, window_get_height() / 2, window_mouse_get_x(), window_mouse_get_y());
+	TurretMove = true;
 	Shoot = mouse_check_button_pressed(mb_left);
 }
-var dd = angle_difference(ShootDirection, turretDir);
-ShootDirection -= min(abs(dd), 10) * sign(dd);
 
 //Calculate movement
-if(Horizontal != 0 || Vertical != 0)	//if moving, snap to desired speed & dir
+var SpeedMin = 0.3;
+Speed = point_distance(0, 0, Horizontal, Vertical)
+Direction = point_direction(0, 0,  Horizontal, Vertical);
+if(point_distance(0, 0, Horizontal, Vertical) > 0.5)	//if moving, snap to desired speed & dir
 {
-	SpeedX = Horizontal;
-	SpeedY = Vertical;
-	direction = point_direction(0, 0, SpeedX, SpeedY);
+	Speed = max(Speed, SpeedMin);
 	//Only change tank body angle when moving, visual only
-	var dd = angle_difference(BodyDirection, direction);
+	var dd = angle_difference(BodyDirection, Direction);
 	BodyDirection -= min(abs(dd), 10) * sign(dd);
 }
+
 else	//if released, apply friction
 {
 	//If not moving, convert speed vector into speed/direction and apply friction
-	var Speed = point_distance(0, 0, SpeedX, SpeedY);
-	var Direction = point_direction(0, 0, SpeedX, SpeedY);
 	Speed = max(0, abs(Speed) - friction);
 	
-	//Convert back to vector
-	SpeedX = sin(Direction) * Speed;
-	SpeedY = cos(Direction) * Speed;
 }
-TrackFrame += point_distance(0, 0, SpeedX, SpeedY) / 10;
+Move(Speed, Direction);
 
-//Apply movement to X/Y
-repeat(abs(SpeedX))
-{
-    if (!place_meeting(x + sign(SpeedX), y, parSolid))
-	{
-        x += sign(SpeedX);
-    }
-	else
-	{
-        break;
-    }
-}
-
-repeat(abs(SpeedY)) 
-{
-    if (!place_meeting(x, y + sign(SpeedY), parSolid))
-	{
-        y += sign(SpeedY);
-    }
-	else
-	{
-        break;
-    }
-}
 
 //Tween turret angle
-var dd = angle_difference(ShootDirection, turretDir);
-ShootDirection -= min(abs(dd), 10) * sign(dd);
+if(TurretMove)
+{
+	var dd = angle_difference(ShootDirection, turretDir);
+	ShootDirection -= min(abs(dd), 10) * sign(dd);
+}
 
 GunTipX = x + lengthdir_x(sprite_get_width(sprPlayerTurret) - 8, ShootDirection);
 GunTipY = y - (sprite_get_number(sprPlayer) + 2) + lengthdir_y(sprite_get_width(sprPlayerTurret) - 8, ShootDirection);
@@ -98,3 +65,6 @@ if(Shoot && (ShootCooldown < 0))
 	bullet.speed = 10;
 	ShootCooldown = 0.1;
 }
+
+//Stuff
+TrackFrame += (Speed / 10);
