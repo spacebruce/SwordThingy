@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+Health = 100;
+HurtFrames = -1;
 
 Diameter = sprite_get_width(sprCentipede);	//32, prolly
 

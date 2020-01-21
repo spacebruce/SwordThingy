@@ -1,10 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-Health = 25;
+--HurtFrames;
 
-HurtFrames = -1;
-AlreadyDead = false;
-
-Value = 100;
-PopValue = 10;
+if (Health < 0)
+{
+	instance_destroy();
+}

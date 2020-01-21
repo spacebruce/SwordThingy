@@ -1,4 +1,7 @@
 ///Input
+ShootCooldown -= 1 / room_speed;
+
+var Shoot = false;
 var Horizontal = 0, Vertical = 0;
 
 var turretDir = ShootDirection;
@@ -19,12 +22,15 @@ if gamepad_is_connected(0)
 		ShootVer = 0;
 	}
 	turretDir = point_direction(0, 0, ShootHor, ShootVer);
+	
+	Shoot = (gamepad_button_check(0, gp_face1));
 } 
 else
 {
 	Horizontal = keyboard_check(vk_right) - keyboard_check(vk_left);
 	Vertical = keyboard_check(vk_down) - keyboard_check(vk_up);
 	turretDir = point_direction(window_get_width() / 2, window_get_height() / 2, window_mouse_get_x(), window_mouse_get_y());
+	Shoot = mouse_check_button_pressed(mb_left);
 }
 var dd = angle_difference(ShootDirection, turretDir);
 ShootDirection -= min(abs(dd), 10) * sign(dd);
@@ -80,3 +86,15 @@ repeat(abs(SpeedY))
 //Tween turret angle
 var dd = angle_difference(ShootDirection, turretDir);
 ShootDirection -= min(abs(dd), 10) * sign(dd);
+
+GunTipX = x + lengthdir_x(sprite_get_width(sprPlayerTurret) - 8, ShootDirection);
+GunTipY = y - (sprite_get_number(sprPlayer) + 2) + lengthdir_y(sprite_get_width(sprPlayerTurret) - 8, ShootDirection);
+
+///Shoot
+if(Shoot && (ShootCooldown < 0))
+{
+	var bullet = instance_create_depth(GunTipX, GunTipY, depth, objPlayerBullet);
+	bullet.direction = ShootDirection;
+	bullet.speed = 10;
+	ShootCooldown = 0.1;
+}
