@@ -1,5 +1,6 @@
 ///RestartGame(Lives);
 
+Score = 0;
 Lives = argument0;
 
 with(parEnemy)
