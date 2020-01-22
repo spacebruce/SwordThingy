@@ -31,19 +31,27 @@ if(point_in_triangle(PlayerX, PlayerY, x, y, ConeLX, ConeLY, ConeRX, ConeRY))
 }
 
 if(SpottedPlayer)
+{
+	NodeBored = -1;
 	SpottedPlayer = (SpottedTimeout > 0);
+}
 
 if(!SpottedPlayer)
 {
 	SpottedTimeout = -1;
-	var target = instance_nearest(x, y, objCentipedePatrol);
-	TargetX = target.x;
-	TargetY = target.y;
+	if(NodeBored < 0)
+	{
+		NodeBored = 10;
+		NodeTarget = instance_find(objCentipedePatrol, irandom(instance_number(objCentipedePatrol) - 1));
+	}
+	NodeBored -= 1 / room_speed;
+	TargetX = NodeTarget.x;
+	TargetY = NodeTarget.y;
 }
 
 var TargetDir = point_direction(x, y, TargetX, TargetY)
 var dd = angle_difference(direction, TargetDir);
-direction -= min(abs(dd), 10) * sign(dd);
+direction -= min(abs(dd), 5) * sign(dd);
 	
 spd = 0.6;
 

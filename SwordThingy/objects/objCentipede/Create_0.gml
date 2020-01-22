@@ -16,6 +16,9 @@ PlayerLastX = 0;
 PlayerLastY = 0;
 SpottedTimeout = -1;
 
+NodeBored = -1;
+NodeTarget = noone;
+
 TargetX = 0;
 TargetY = 0;
 
