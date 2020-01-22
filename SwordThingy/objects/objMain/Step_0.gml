@@ -1,7 +1,5 @@
 /// @description Insert description here
 
-if(keyboard_check_pressed(vk_space))
-	++Level;
 if(gamepad_button_check_pressed(0, gp_face4))
 {
 	screen_save("screen" + string(current_second) + "f" + md5_string_utf8(string(current_time)) + ".png");

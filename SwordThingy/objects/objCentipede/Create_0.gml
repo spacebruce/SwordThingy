@@ -2,7 +2,7 @@
 // You can write your code in this editor
 Value = 400;
 Damage = 10;
-
+Killed = false;
 Health = 100;
 HurtFrames = -1;
 

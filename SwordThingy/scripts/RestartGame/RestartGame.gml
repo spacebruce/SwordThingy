@@ -15,3 +15,4 @@ with(parPickup)
 }
 
 instance_create_depth(0,0,0,objPlayerDead);
+LevelLoad(0);

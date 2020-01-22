@@ -1,5 +1,6 @@
 ///LevelBegin(level num);
 
+show_debug_message("Attempt load of level " + string (argument0));
 ///Hack to get around dead player bug
 ++Lives;
 		

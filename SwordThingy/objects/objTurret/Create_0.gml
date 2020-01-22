@@ -4,6 +4,7 @@
 Target = noone;
 direction = 90;
 
+Killed = false;
 Value = 50;
 Health = 50;
 Damage = 10;
