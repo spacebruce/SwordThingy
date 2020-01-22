@@ -6,3 +6,8 @@ if (Health < 0)
 {
 	instance_destroy();
 }
+
+spd = 1.0;
+direction = direction + 1.0;
+
+Move(spd, direction);

@@ -1,19 +1,10 @@
 {
-    "id": "acc06e62-5007-40dc-a0d1-d65f49b2a557",
+    "id": "d0434a14-d66d-4b29-b556-4edc62de83cc",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "objMainMenu",
+    "name": "parPickup",
     "eventList": [
-        {
-            "id": "bcf1d1e3-f1fa-45e0-a526-c0e080b563f1",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 13,
-            "eventtype": 5,
-            "m_owner": "acc06e62-5007-40dc-a0d1-d65f49b2a557"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

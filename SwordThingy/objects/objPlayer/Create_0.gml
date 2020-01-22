@@ -17,3 +17,10 @@ BodyDirection = 0;
 ShootDirection = 0;
 
 friction = 0.15;
+
+enum PickupType
+{
+	None, Power, Speed,
+}
+PickupEffect = PickupType.None;
+PickupTimer = -1;

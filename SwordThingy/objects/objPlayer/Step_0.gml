@@ -1,6 +1,16 @@
 ///Input
 HurtFrames -= 1 / room_speed;
 ShootCooldown -= 1 / room_speed;
+PickupTimer -= 1 / room_speed;
+
+//Debug
+if(keyboard_check_pressed(vk_delete))
+	Health = -100;
+	
+if (Health < 0)
+{
+	instance_destroy();
+}
 
 var Shoot = false;
 var Horizontal = 0, Vertical = 0;
@@ -29,10 +39,14 @@ else
 //Calculate movement
 var SpeedMin = 0.3;
 Speed = point_distance(0, 0, Horizontal, Vertical)
+
+
 Direction = point_direction(0, 0,  Horizontal, Vertical);
 if(point_distance(0, 0, Horizontal, Vertical) > 0.5)	//if moving, snap to desired speed & dir
 {
 	Speed = max(Speed, SpeedMin);
+	if(PickupEffect = PickupType.Speed)
+		Speed *= 3;
 	//Only change tank body angle when moving, visual only
 	var dd = angle_difference(BodyDirection, Direction);
 	BodyDirection -= min(abs(dd), 10) * sign(dd);
@@ -63,8 +77,18 @@ if(Shoot && (ShootCooldown < 0))
 	var bullet = instance_create_depth(GunTipX, GunTipY, depth, objPlayerBullet);
 	bullet.direction = ShootDirection;
 	bullet.speed = 10;
-	ShootCooldown = 0.1;
+	if(PickupEffect = PickupType.Power)
+		ShootCooldown = 0;
+	else
+		ShootCooldown = 0.1;
 }
 
 //Stuff
 TrackFrame += (Speed / 10);
+
+//Powerups
+if(PickupTimer <= 0)
+{
+	PickupTimer = -1;
+	PickupEffect = PickupType.None;
+}

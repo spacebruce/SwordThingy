@@ -7,9 +7,18 @@ if (Health < 0)
 	instance_destroy();
 }
 
-if ((!instance_exists(Parent)) && !AlreadyDead)
+if (!instance_exists(Parent))	
 {
-	Value = PopValue;	//Reduce value if killed in chain
-	AlreadyDead = true;
-	alarm[0] = room_speed / 8;
+	if (!AlreadyDead)	//if chain broke & not in dead condition
+	{
+		Value = PopValue;	//Reduce value if killed in chain
+		AlreadyDead = true;
+		alarm[0] = room_speed / 8;
+	}
+}
+else	//If parent exists, follow it
+{
+	var angle = point_direction(Parent.x, Parent.y, x, y);
+	x = Parent.x + lengthdir_x(Diameter / 2, angle);
+	y = Parent.y + lengthdir_y(Diameter / 2, angle);
 }

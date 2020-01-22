@@ -1,8 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-globalvar Score;
+globalvar Score, Lives;
 Score = 0;
+Lives = 2;
+
+PlayerRespawn = -1;
+PlayerX = objPlayerSpawn.x;
+PlayerY = objPlayerSpawn.y;
 
 globalvar ScreenScale, ScreenWidth, ScreenHeight;
 ScreenScale = 2;
