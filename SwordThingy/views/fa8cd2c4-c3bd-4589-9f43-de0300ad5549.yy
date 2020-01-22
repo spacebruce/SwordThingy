@@ -4,9 +4,8 @@
     "mvc": "1.1",
     "name": "fa8cd2c4-c3bd-4589-9f43-de0300ad5549",
     "children": [
-        "e0d0983d-670e-4c1d-9a5b-ef7e5ae09c45",
-        "bf110325-2d3f-47a7-937c-49b1c4599acb",
-        "e5dde844-a9e0-4ed9-bd8d-8bb37eedd686"
+        "e4f313d6-1a69-4f74-be47-3821b5a28683",
+        "53f67cc6-ffd4-4bd3-8b02-dcdfebb46fed"
     ],
     "filterType": "GMObject",
     "folderName": "Enemies",
