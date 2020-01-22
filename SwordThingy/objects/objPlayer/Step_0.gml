@@ -21,6 +21,15 @@ if gamepad_is_connected(0)
 {
 	Horizontal = gamepad_axis_value(0, gp_axislh);
 	Vertical = gamepad_axis_value(0, gp_axislv);
+	
+	var padHor = gamepad_button_check(0, gp_padr) - gamepad_button_check(0, gp_padl);
+	var padVer = gamepad_button_check(0, gp_padd) - gamepad_button_check(0, gp_padu);
+	if(padHor != 0 || padVer != 0)
+	{
+		Horizontal = padHor;
+		Vertical = padVer;
+		show_debug_message(string(padHor) + ", " + string(padVer));
+	}
 	var ShootHor = gamepad_axis_value(0, gp_axisrh);
 	var ShootVer = gamepad_axis_value(0, gp_axisrv);
 	TurretMove = (point_distance(0, 0, ShootHor, ShootVer) > 0.5);
