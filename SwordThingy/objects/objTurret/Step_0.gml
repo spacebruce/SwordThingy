@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if(Health <= 0)
+	instance_destroy();
+
 if(instance_exists(objPlayer))
 {
 	Target = objPlayer;
@@ -36,10 +39,19 @@ if(current_second & 1)
 	{
 		LineX = hit[1];
 		LineY = hit[2];
+		if(DamageReset)
+		{
+			if(hit[0] == instance_find(objPlayer, 0) || object_get_parent(hit[0]) == parEnemy)
+			{
+				hit[0].Health -= 5;
+				DamageReset = false;
+			}
+		}
 	}
 }
 else
 {
 	LineX = x;
 	LineY = y;
+	DamageReset = true;
 }

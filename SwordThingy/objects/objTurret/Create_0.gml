@@ -8,5 +8,6 @@ Value = 50;
 Health = 50;
 Damage = 10;
 
+DamageReset = false;
 LineX = x;
 LineY = y;

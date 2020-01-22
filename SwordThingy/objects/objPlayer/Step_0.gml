@@ -4,10 +4,10 @@ ShootCooldown -= 1 / room_speed;
 PickupTimer -= 1 / room_speed;
 
 //Debug
-if(keyboard_check_pressed(vk_delete))
+if(keyboard_check_pressed(vk_delete) || gamepad_button_check(0, gp_select))
 	Health = -100;
 	
-if (Health < 0)
+if (Health <= 0)
 {
 	instance_destroy();
 }
