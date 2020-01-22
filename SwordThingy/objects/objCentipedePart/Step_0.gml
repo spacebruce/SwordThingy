@@ -19,6 +19,6 @@ if (!instance_exists(Parent))
 else	//If parent exists, follow it
 {
 	var angle = point_direction(Parent.x, Parent.y, x, y);
-	x = Parent.x + lengthdir_x(Diameter / 2, angle);
-	y = Parent.y + lengthdir_y(Diameter / 2, angle);
+	x = Parent.x + lengthdir_x(Diameter, angle);
+	y = Parent.y + lengthdir_y(Diameter, angle);
 }

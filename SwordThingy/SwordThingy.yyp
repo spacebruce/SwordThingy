@@ -343,6 +343,14 @@
             }
         },
         {
+            "Key": "bc353ee0-df43-4777-8065-b433b7531794",
+            "Value": {
+                "id": "6b4eaf12-5fe3-4445-98bf-f427c00e8ee9",
+                "resourcePath": "sprites\\sprTileset\\sprTileset.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "beb52459-4c35-4dde-b70b-c298e9b37f13",
             "Value": {
                 "id": "7b31dc93-e811-473b-803f-6e79165ba67f",
@@ -500,6 +508,14 @@
                 "id": "b7e7af5e-14d2-47bb-a0b9-7f86bc85e93d",
                 "resourcePath": "objects\\objPlayerBullet\\objPlayerBullet.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "f29c4105-8890-445e-94f4-7451cbed5b5a",
+            "Value": {
+                "id": "e7b0e231-50b3-4dc6-8449-4312f39e25e1",
+                "resourcePath": "tilesets\\tileset0\\tileset0.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {
