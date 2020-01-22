@@ -98,7 +98,7 @@
             "Key": "35392d57-ae35-43b5-8717-4be0c984cf61",
             "Value": {
                 "id": "d129afca-4e6a-4693-b0fe-fe2148a3b6a8",
-                "resourcePath": "objects\\objBlock\\objBlock.yy",
+                "resourcePath": "objects\\objBlock16\\objBlock16.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -212,6 +212,14 @@
                 "id": "240e39e1-a3a4-4948-aed7-9e93b7d1172f",
                 "resourcePath": "views\\59d8949e-3181-4ae4-83a2-c50bbb15078a.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "5de3fd84-5d28-4454-afd8-19093e88b2b4",
+            "Value": {
+                "id": "007904d9-caf3-490c-a9fd-5c76afa2f998",
+                "resourcePath": "sprites\\sprBlock32\\sprBlock32.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -428,6 +436,14 @@
                 "id": "5af6192d-6dc6-43ed-9152-8ee9044b42ca",
                 "resourcePath": "scripts\\RestartGame\\RestartGame.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "dd7f4b30-0141-49dd-b537-ce5db3cbaf79",
+            "Value": {
+                "id": "7286b9a5-7867-4723-ad5b-7b111e152662",
+                "resourcePath": "objects\\objBlock32\\objBlock32.yy",
+                "resourceType": "GMObject"
             }
         },
         {
