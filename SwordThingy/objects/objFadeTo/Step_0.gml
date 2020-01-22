@@ -9,14 +9,7 @@ if(FadeOut)
 		FadeOut = false;
 		if(!DidTheThing)
 		{
-			if(room != RoomTo)
-			{
-				room_goto(RoomTo);
-			}
-			else
-			{
-				room_restart();
-			}
+			LevelLoad(RoomTo);
 			DidTheThing = true;
 		}
 	}	

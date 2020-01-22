@@ -7,9 +7,12 @@ if(gamepad_button_check_pressed(0, gp_face4))
 
 if(instance_exists(objMainMenu))
 {
-	PlayerX = objPlayerSpawn.x;
-	PlayerY = objPlayerSpawn.y;
-	
+	if(instance_exists(objPlayerSpawn))
+	{
+		PlayerX = objPlayerSpawn.x;
+		PlayerY = objPlayerSpawn.y;
+	}
+
 	if (MenuBoredTimer != -1)
 	{
 		MenuBoredTimer -= 1 / room_speed;

@@ -103,6 +103,14 @@
             }
         },
         {
+            "Key": "315edafe-9546-4230-9dcd-9a24e853bf52",
+            "Value": {
+                "id": "9f103b4e-669b-464b-8cc6-fac8b757dbec",
+                "resourcePath": "scripts\\LevelDefine\\LevelDefine.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "342f4532-f05d-478c-be4a-1ea040aa4a55",
             "Value": {
                 "id": "be0c0de8-146d-4836-b4d4-f4ab53f010a9",
@@ -343,14 +351,6 @@
             }
         },
         {
-            "Key": "902b1463-150f-41a1-98b5-b635c3cabad6",
-            "Value": {
-                "id": "fd99808a-0525-4a4f-a531-ba5aceb2e66d",
-                "resourcePath": "rooms\\room2\\room2.yy",
-                "resourceType": "GMRoom"
-            }
-        },
-        {
             "Key": "94c89c95-9786-4103-b2f3-b40d251bcf85",
             "Value": {
                 "id": "9a48878e-177d-4648-996d-5bd9012341cf",
@@ -427,6 +427,14 @@
             "Value": {
                 "id": "a8585c49-4f34-4215-8556-dca871acec51",
                 "resourcePath": "objects\\parSolid\\parSolid.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "ae02505e-8a93-4c11-93fd-9ae29b655094",
+            "Value": {
+                "id": "f840ae25-4c79-456f-8249-cf2c8a65ad28",
+                "resourcePath": "objects\\objRoom\\objRoom.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -508,6 +516,14 @@
                 "id": "0ac759bb-6445-4789-8c54-33da39a2f7ff",
                 "resourcePath": "objects\\parPickup\\parPickup.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "d36fbce3-bc01-4074-baa2-05a84943992f",
+            "Value": {
+                "id": "f1185676-e98b-4e86-8387-7dc2f0309917",
+                "resourcePath": "scripts\\LevelLoad\\LevelLoad.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -666,7 +682,7 @@
             "Key": "f403622a-a3ee-45aa-9ec3-2a5de41f6697",
             "Value": {
                 "id": "b638a744-0a17-4092-99af-7d906584b4b0",
-                "resourcePath": "rooms\\rmLevel1\\rmLevel1.yy",
+                "resourcePath": "rooms\\rmGame\\rmGame.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -729,7 +745,9 @@
         "569b2823-0086-4943-9e23-b87a791549f1",
         "a83857b4-4eaf-48d6-8b8a-13cb86bbec7b",
         "7a00ce5b-94e2-4a5a-b94d-e0a0724fa17a",
-        "d3f51120-ca44-46ff-b90b-c9e593ea6eb1"
+        "d3f51120-ca44-46ff-b90b-c9e593ea6eb1",
+        "d36fbce3-bc01-4074-baa2-05a84943992f",
+        "315edafe-9546-4230-9dcd-9a24e853bf52"
     ],
     "tutorial": ""
 }

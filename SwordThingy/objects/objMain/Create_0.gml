@@ -3,6 +3,8 @@
 if(instance_number(objMain) > 1)
 	instance_destroy();
 
+LevelDefine();
+
 globalvar Score, Lives;
 Score = 0;
 Lives = 2;
@@ -13,8 +15,8 @@ PausedLast = false;
 PausedDraw = -1;
 
 PlayerRespawn = -1;
-PlayerX = objPlayerSpawn.x;
-PlayerY = objPlayerSpawn.y;
+PlayerX = 0;//objPlayerSpawn.x;
+PlayerY = 0;//objPlayerSpawn.y;
 
 MenuBoredTimer = -1;	//How long until this gets bored and resets game
 
@@ -31,6 +33,10 @@ CameraX = 0;
 CameraY = 0;
 CameraTween = 0.0;
 
+instance_create_layer(0, 0, "Hud", objMainMenu);
 instance_create_layer(0, 0, "Hud", objHud);
 
 instance_create_layer(0, 0, "BackgroundObjects", objBackgroundCity);
+
+
+LevelLoad(0);

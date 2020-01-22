@@ -5,7 +5,7 @@ Lives = argument0;
 
 with(parEnemy)
 {
-	//instance_destroy();
+	instance_destroy();
 }
 
 with(parPickup)
