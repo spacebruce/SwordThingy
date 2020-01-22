@@ -1,5 +1,10 @@
 ///LevelBegin(level num);
 
+///Hack to get around dead player bug
+++Lives;
+		
+LevelCurrent = argument0;
+
 with(objRoom)
 	instance_destroy();
 with(parEntity)

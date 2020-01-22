@@ -13,6 +13,9 @@ with(objPlayer)
 	draw_set_valign(fa_top);
 	draw_set_font(fntHUD);
 	DrawTextOutline(string(Score), ScreenWidth / 2, 0);
+	
+	draw_set_halign(fa_left);
+	DrawTextOutline(string(Lives), 0, 0);
 
 	draw_set_valign(fa_bottom)
 	DrawTextOutline(string(Health), ScreenWidth / 2, ScreenHeight);

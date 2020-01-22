@@ -13,3 +13,5 @@ with(parPickup)
 	x = xstart;
 	y = ystart;
 }
+
+instance_create_depth(0,0,0,objPlayerDead);

@@ -1,8 +1,17 @@
 /// @description Insert description here
 
+if(keyboard_check_pressed(vk_space))
+	++Level;
 if(gamepad_button_check_pressed(0, gp_face4))
 {
 	screen_save("screen" + string(current_second) + "f" + md5_string_utf8(string(current_time)) + ".png");
+}
+
+
+if(Level != LevelCurrent)
+{
+	RoomFadeTo(Level);
+	return;
 }
 
 if(instance_exists(objMainMenu))
@@ -17,35 +26,41 @@ if(instance_exists(objMainMenu))
 	{
 		MenuBoredTimer -= 1 / room_speed;
 		if(MenuBoredTimer <= 0)
-			RoomFadeTo(rmLevel1);
+			RoomFadeTo(0);
 	}
 }
 else
 {
 	if(keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0, gp_start))
 		Paused = !Paused;
-		
-	if (!instance_exists(objPlayer) && !Paused)	//Player is deaddd??
+	
+	if(!Paused)
 	{
-		if(PlayerRespawn == -1)	
-			PlayerRespawn = 1;	//Set respawn timer to 1 second if not already set
-		
-		if(PlayerRespawn > 0)	//if respawn timer bigger than 0, tick down
+		if(instance_exists(objPlayer))
 		{
-			PlayerRespawn -= 1 / room_speed;
-			if(PlayerRespawn <= 0)	//If just triggered respawn
+		}
+		else if (instance_exists(objPlayerDead))	//Player is deaddd??
+		{
+			if(PlayerRespawn == -1)	
+				PlayerRespawn = 1;	//Set respawn timer to 1 second if not already set
+		
+			if(PlayerRespawn > 0)	//if respawn timer bigger than 0, tick down
 			{
-				--Lives;	//Take 1 life away
-				if(Lives < 0)	// out of lives?
+				PlayerRespawn -= 1 / room_speed;
+				if(PlayerRespawn <= 0)	//If just triggered respawn
 				{
-					instance_create_layer(0, 0, "Hud", objMainMenu);
-					MenuBoredTimer = 4;	//4 seconds til world reset
+					--Lives;	//Take 1 life away
+					if(Lives < 0)	// out of lives?
+					{
+						instance_create_layer(0, 0, "Hud", objMainMenu);
+						MenuBoredTimer = 4;	//4 seconds til world reset
+					}
+					else
+					{
+						instance_create_depth(PlayerX, PlayerY, 0, objPlayer);
+					}
+					PlayerRespawn = -1;	//defuse
 				}
-				else
-				{
-					instance_create_depth(PlayerX, PlayerY, 0, objPlayer);
-				}
-				PlayerRespawn = -1;	//defuse
 			}
 		}
 	}

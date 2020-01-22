@@ -4,6 +4,9 @@ if(instance_number(objMain) > 1)
 	instance_destroy();
 
 LevelDefine();
+globalvar Level, LevelCurrent;
+Level = 0;
+LevelCurrent = 0;
 
 globalvar Score, Lives;
 Score = 0;
