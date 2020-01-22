@@ -7,6 +7,11 @@ globalvar Score, Lives;
 Score = 0;
 Lives = 2;
 
+globalvar Paused; 
+Paused = false;
+PausedLast = false;
+PausedDraw = -1;
+
 PlayerRespawn = -1;
 PlayerX = objPlayerSpawn.x;
 PlayerY = objPlayerSpawn.y;
@@ -20,9 +25,12 @@ ScreenHeight = 1080 / 3;
 
 window_set_size(ScreenWidth * ScreenScale, ScreenHeight * ScreenScale);
 surface_resize(application_surface, ScreenWidth, ScreenHeight);
+pause_surface = surface_create(ScreenWidth, ScreenHeight);
 
 CameraX = 0;
 CameraY = 0;
 CameraTween = 0.0;
+
+instance_create_layer(0, 0, "Hud", objHud);
 
 instance_create_layer(0, 0, "BackgroundObjects", objBackgroundCity);

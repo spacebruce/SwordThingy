@@ -1,5 +1,9 @@
 /// @description Insert description here
-// You can write your code in this editor
+
+if(gamepad_button_check_pressed(0, gp_face4))
+{
+	screen_save("screen" + string(current_second) + "f" + md5_string_utf8(string(current_time)) + ".png");
+}
 
 if(instance_exists(objMainMenu))
 {
@@ -15,12 +19,15 @@ if(instance_exists(objMainMenu))
 }
 else
 {
-	if(!instance_exists(objPlayer))
+	if(keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0, gp_start))
+		Paused = !Paused;
+		
+	if (!instance_exists(objPlayer) && !Paused)	//Player is deaddd??
 	{
 		if(PlayerRespawn == -1)	
 			PlayerRespawn = 1;	//Set respawn timer to 1 second if not already set
 		
-		if(PlayerRespawn > 0)	//if respawn bigger than 0, tick down
+		if(PlayerRespawn > 0)	//if respawn timer bigger than 0, tick down
 		{
 			PlayerRespawn -= 1 / room_speed;
 			if(PlayerRespawn <= 0)	//If just triggered respawn

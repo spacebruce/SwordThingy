@@ -10,4 +10,5 @@ gpu_set_blendmode(bm_add);
 draw_sprite(sprTurret, 1, x, y);
 gpu_set_blendmode(bm_normal);
 
-draw_line(x, y, LineX, LineY);
+draw_sprite_line(x, y, LineX, LineY, sprBeam);
+//draw_line(x, y, LineX, LineY);

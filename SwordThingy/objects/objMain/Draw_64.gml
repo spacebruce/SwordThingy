@@ -1,7 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-DrawTextOutline(string(MenuBoredTimer), 200, 200);
+if(PausedDraw > 0)
+	draw_surface(pause_surface, 0, 0);
 
 with(objFadeTo)
 {
