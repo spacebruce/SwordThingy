@@ -175,6 +175,14 @@
             }
         },
         {
+            "Key": "6ba9a5f6-2da4-42cd-8a0a-e2add30d9479",
+            "Value": {
+                "id": "23d05eb6-8bc6-4c22-b040-26e1eb11b690",
+                "resourcePath": "fonts\\fntHUD\\fntHUD.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "6fe18ced-14c9-4d41-8a78-fc00722c4461",
             "Value": {
                 "id": "dbf35ebc-9398-462d-aa9a-9a2d930bb557",
@@ -196,6 +204,14 @@
                 "id": "38c4b8ff-82bc-40bc-a400-bed4bbd54b98",
                 "resourcePath": "views\\7ccc7f6a-1d7e-4b5a-8436-dd2c872e1a6f.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "857daf9b-0080-45cf-b147-39918ce3094d",
+            "Value": {
+                "id": "07d66c1d-4937-4988-bf2a-72b9f3b28505",
+                "resourcePath": "scripts\\CreateScorePopup\\CreateScorePopup.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -441,7 +457,8 @@
     ],
     "script_order": [
         "399ac65c-e131-476e-b5c8-701c46ab3c4e",
-        "3acc651f-5ac7-44d4-a4cd-d9eb16fc71f7"
+        "3acc651f-5ac7-44d4-a4cd-d9eb16fc71f7",
+        "857daf9b-0080-45cf-b147-39918ce3094d"
     ],
     "tutorial": ""
 }

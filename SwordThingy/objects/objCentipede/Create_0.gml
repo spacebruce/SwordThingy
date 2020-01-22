@@ -12,6 +12,8 @@ Diameter = sprite_get_width(sprCentipede);	//32, prolly
 var angle = random_range(-360, 360);
 var Last = id;
 var CX = x, CY = y;
+CX += lengthdir_x(Diameter, angle);
+CY += lengthdir_y(Diameter, angle);
 
 PartNum = 8;
 for(var i = 0; i < PartNum; ++i)
