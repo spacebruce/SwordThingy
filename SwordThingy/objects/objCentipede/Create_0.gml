@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+Value = 400;
 Damage = 10;
 
 Health = 100;

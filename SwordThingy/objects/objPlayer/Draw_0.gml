@@ -6,6 +6,8 @@ if(HurtFrames > 0)
 	shader_set(shdFlash);
 }
 
+//single outline frame
+draw_sprite_ext(sprPlayerOutline, 0, x, y - 7, 1, 1, BodyDirection, c_white, 1.0);
 for(var i = 0; i < sprite_get_number(sprPlayer); ++i)
 {
 	draw_sprite_ext(sprPlayer, i, x, y - i, 1.0, 1.0, BodyDirection, c_white, 1.0);
