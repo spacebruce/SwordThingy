@@ -23,5 +23,6 @@ surface_resize(application_surface, ScreenWidth, ScreenHeight);
 
 CameraX = 0;
 CameraY = 0;
+CameraTween = 0.0;
 
 instance_create_layer(0, 0, "BackgroundObjects", objBackgroundCity);
