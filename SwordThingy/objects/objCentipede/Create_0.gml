@@ -7,8 +7,20 @@ Health = 100;
 HurtFrames = -1;
 
 direction = random_range(-360, 360);
-speed = 1.0;
+spd = 0.0;
 
+///AI
+SpottedPlayer = false;
+SpottedDistance = 150;
+PlayerLastX = 0;
+PlayerLastY = 0;
+SpottedTimeout = -1;
+
+TargetX = 0;
+TargetY = 0;
+
+
+///Create Chain
 Diameter = sprite_get_width(sprCentipede);	//32, prolly
 
 var angle = direction;
@@ -25,7 +37,7 @@ for(var i = 0; i < PartNum; ++i)
 	Part.Diameter = Diameter;
 	Last = Part;
 	
-	angle += 20 * sign(angle);
+	angle += 10 * sign(angle);
 	CX += lengthdir_x(Diameter, angle);
 	CY += lengthdir_y(Diameter, angle);
 }

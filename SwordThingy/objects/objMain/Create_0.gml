@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+if(instance_number(objMain) > 1)
+	instance_destroy();
 
 globalvar Score, Lives;
 Score = 0;
@@ -8,6 +10,8 @@ Lives = 2;
 PlayerRespawn = -1;
 PlayerX = objPlayerSpawn.x;
 PlayerY = objPlayerSpawn.y;
+
+MenuBoredTimer = -1;	//How long until this gets bored and resets game
 
 globalvar ScreenScale, ScreenWidth, ScreenHeight;
 ScreenScale = 2;

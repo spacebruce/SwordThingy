@@ -5,6 +5,13 @@ if(instance_exists(objMainMenu))
 {
 	PlayerX = objPlayerSpawn.x;
 	PlayerY = objPlayerSpawn.y;
+	
+	if (MenuBoredTimer != -1)
+	{
+		MenuBoredTimer -= 1 / room_speed;
+		if(MenuBoredTimer <= 0)
+			RoomFadeTo(rmLevel1);
+	}
 }
 else
 {
@@ -22,6 +29,7 @@ else
 				if(Lives < 0)	// out of lives?
 				{
 					instance_create_layer(0, 0, "Hud", objMainMenu);
+					MenuBoredTimer = 4;	//4 seconds til world reset
 				}
 				else
 				{
