@@ -101,3 +101,13 @@ if(PickupTimer <= 0)
 	PickupTimer = -1;
 	PickupEffect = PickupType.None;
 }
+
+///Current Room
+if(x != xprevious || y != yprevious)
+{
+	RoomX = floor(x / 512);
+	RoomY = floor(y / 512);
+	var Array = LevelLayout[| Level];
+	RoomSlot = (RoomY * Array[0]) + RoomX;
+	LevelVisited[| RoomSlot] = true;
+}

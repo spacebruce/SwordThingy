@@ -1,4 +1,8 @@
 
+RoomX = 0;
+RoomY = 0;
+RoomSlot = 0;
+
 HurtFrames = -1;
 
 MaxHealth = 100;

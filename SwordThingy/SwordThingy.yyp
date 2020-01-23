@@ -103,11 +103,27 @@
             }
         },
         {
+            "Key": "19829e2d-a2d0-4075-b7ca-2776c2c692a8",
+            "Value": {
+                "id": "b1f22846-ab49-42cd-84b1-a378816b5cf5",
+                "resourcePath": "objects\\objEmpty\\objEmpty.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1a0e52a3-3801-4ece-a7af-ddabff4f6669",
             "Value": {
                 "id": "a334039b-3925-49ac-bd1d-463d71575627",
                 "resourcePath": "objects\\objPickupPower\\objPickupPower.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "2143149f-da12-4214-862f-243c6d40e66b",
+            "Value": {
+                "id": "12dbb22d-da2d-4216-ad1a-8647e293a451",
+                "resourcePath": "scripts\\RoomGetObject\\RoomGetObject.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -811,7 +827,8 @@
         "7a00ce5b-94e2-4a5a-b94d-e0a0724fa17a",
         "d3f51120-ca44-46ff-b90b-c9e593ea6eb1",
         "d36fbce3-bc01-4074-baa2-05a84943992f",
-        "315edafe-9546-4230-9dcd-9a24e853bf52"
+        "315edafe-9546-4230-9dcd-9a24e853bf52",
+        "2143149f-da12-4214-862f-243c6d40e66b"
     ],
     "tutorial": ""
 }
