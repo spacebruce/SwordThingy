@@ -23,28 +23,34 @@ var py = 0;
 var Size = 512;
 for(var i = 0; i < (Width * Height); ++i)
 {
-	var Room = instance_create_depth(px * Size, py * Size, 0, objEmpty);
 	var Type = Array[2 + i];
-	
-	Room.Size = Size;
-	Room.Type = Type;
-	with(Room)	instance_change(objRoom, true);
-	
-	ds_list_add(LevelVisited, Type == 2);	//Set visited flag if spawn room
-	
-	
-	show_debug_message("R: "+ string(px)+","+string(py)+" : "+ string(Type));
-	switch(Type)
+	if(Type > 0)
 	{
-	case 1:	//Normal
-	break;
-	case 2:	//Spawn room
-	break;	
-	case 3:	//Boss room
-	break;
-	default:
-		instance_destroy(Room);
-	break;
+		var Room = instance_create_depth(px * Size, py * Size, 0, objEmpty);
+		
+		Room.RoomX = px;
+		Room.RoomY = py;
+		Room.RoomIndex = i;
+	
+		Room.Size = Size;
+		Room.Type = Type;
+	
+		with(Room)	instance_change(objRoom, true);
+	
+		ds_list_add(LevelVisited, Type == 2);	//Set visited flag if spawn room
+	
+		//show_debug_message("R: "+ string(px)+","+string(py)+" : "+ string(Type));
+		switch(Type)
+		{
+		case 1:	//Normal
+		break;
+		case 2:	//Spawn room
+		break;	
+		case 3:	//Boss room
+		break;
+		default:
+		break;
+		}
 	}
 	++px;	
 	if(px == Width)

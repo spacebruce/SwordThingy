@@ -10,3 +10,10 @@ if(!Active && instance_exists(objPlayer))
 	}
 }
 
+if(State == RoomState.Inactive && Active)
+	State = RoomState.Active;
+if(State == RoomState.Active)
+{
+	if(!Active)
+		State = RoomState.Inactive;
+}
