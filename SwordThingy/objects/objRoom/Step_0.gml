@@ -32,9 +32,10 @@ if(State == RoomState.Active)
 }
 if(State == RoomState.Completed)
 {
-	Active = false;
 	if(StateLast != State)
 	{
+		Active = false;
+		show_debug_message(string(id) + " DEACTIVATED");
 		script_execute(RoomScript, ScriptState.End);
 		for(var i = 0; i < ds_list_size(DoorList); ++i)
 		{
