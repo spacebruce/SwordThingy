@@ -583,6 +583,14 @@
             }
         },
         {
+            "Key": "b3b173ee-72f1-45df-9698-cc28797c6d77",
+            "Value": {
+                "id": "adfb5a5e-7077-4259-8840-697a19ec5d60",
+                "resourcePath": "scripts\\roomBoss\\roomBoss.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b6c1d353-ade3-475c-b613-6d13b4256cb5",
             "Value": {
                 "id": "0b6aeba6-b914-430f-8446-9a71665cbe2c",
@@ -929,7 +937,8 @@
         "569b2823-0086-4943-9e23-b87a791549f1",
         "d3f51120-ca44-46ff-b90b-c9e593ea6eb1",
         "4cd2f2ae-03c3-417e-9f8e-1c4477ed238e",
-        "9f0b3d58-4ca8-4c66-9d3f-e615b695039f"
+        "9f0b3d58-4ca8-4c66-9d3f-e615b695039f",
+        "b3b173ee-72f1-45df-9698-cc28797c6d77"
     ],
     "tutorial": ""
 }
