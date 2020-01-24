@@ -79,6 +79,14 @@
             }
         },
         {
+            "Key": "08b5b31b-4032-4bb0-9dd2-23da84cb50c8",
+            "Value": {
+                "id": "7882e010-51cb-47b7-a8d8-83e41fbe44c7",
+                "resourcePath": "scripts\\ScriptEmpty\\ScriptEmpty.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0a8f1e89-fc0d-4abc-8593-fb47d93c8057",
             "Value": {
                 "id": "f004896b-aa80-4855-a5bd-cafdf06ca983",
@@ -271,6 +279,14 @@
             }
         },
         {
+            "Key": "4cd2f2ae-03c3-417e-9f8e-1c4477ed238e",
+            "Value": {
+                "id": "17ce7970-e218-4345-848d-54b0d8458d62",
+                "resourcePath": "scripts\\roomCentipedes\\roomCentipedes.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "4dda33e2-a7c1-4618-a02e-c6c6d6b65dba",
             "Value": {
                 "id": "157ca17b-7fbe-4c07-a4d8-c25aff70732a",
@@ -323,6 +339,14 @@
             "Value": {
                 "id": "5704d04d-d8f8-4ec6-b175-7948fc649d02",
                 "resourcePath": "scripts\\DrawTank\\DrawTank.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "57a41771-a8a7-461c-83f1-9522c34b91a5",
+            "Value": {
+                "id": "e7b7e8b6-6f7a-4eb9-9249-ef4e385bfd9f",
+                "resourcePath": "scripts\\RoomSetState\\RoomSetState.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -468,6 +492,14 @@
                 "id": "69102d34-b6f9-4d05-a5f8-99b0823ca84b",
                 "resourcePath": "sprites\\sprPlayer\\sprPlayer.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "9f0b3d58-4ca8-4c66-9d3f-e615b695039f",
+            "Value": {
+                "id": "105b263f-0da9-4e09-8024-c72eff82959e",
+                "resourcePath": "scripts\\roomTurrets\\roomTurrets.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -668,6 +700,14 @@
                 "id": "d8c48e1a-a97a-47d3-a8a6-29fc758bd113",
                 "resourcePath": "objects\\objBossDeadTimer\\objBossDeadTimer.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "d7f49ee8-dbd3-4b8e-a1ed-14eee03a2a3a",
+            "Value": {
+                "id": "c0182241-7642-43a3-86de-203c7c86bbee",
+                "resourcePath": "views\\d7f49ee8-dbd3-4b8e-a1ed-14eee03a2a3a.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -879,13 +919,17 @@
         "315edafe-9546-4230-9dcd-9a24e853bf52",
         "5105f754-4942-4ac4-b5ee-c7a7afdf8073",
         "2143149f-da12-4214-862f-243c6d40e66b",
+        "57a41771-a8a7-461c-83f1-9522c34b91a5",
         "7a00ce5b-94e2-4a5a-b94d-e0a0724fa17a",
         "399ac65c-e131-476e-b5c8-701c46ab3c4e",
+        "08b5b31b-4032-4bb0-9dd2-23da84cb50c8",
         "3acc651f-5ac7-44d4-a4cd-d9eb16fc71f7",
         "cbff5fb9-2610-409d-af1b-92fbd00026af",
         "0a8f1e89-fc0d-4abc-8593-fb47d93c8057",
         "569b2823-0086-4943-9e23-b87a791549f1",
-        "d3f51120-ca44-46ff-b90b-c9e593ea6eb1"
+        "d3f51120-ca44-46ff-b90b-c9e593ea6eb1",
+        "4cd2f2ae-03c3-417e-9f8e-1c4477ed238e",
+        "9f0b3d58-4ca8-4c66-9d3f-e615b695039f"
     ],
     "tutorial": ""
 }

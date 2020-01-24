@@ -12,6 +12,12 @@ if (Health <= 0)
 	instance_destroy();
 }
 
+if(keyboard_check_pressed(vk_control))
+{
+	if(RoomObj != noone)
+		RoomObj.Finished = true;
+}
+
 var Shoot = false;
 var Horizontal = 0, Vertical = 0;
 var TurretMove = false;

@@ -1,9 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-enum RoomState { Unexplored, Inactive, Active, Completed }
+enum RoomState { Unexplored, Active, Completed }
+enum ScriptState { Begin, Tick, End }
+
 State = RoomState.Unexplored;
+StateLast = -1;
 Active = false;
+
 Finished = false;
 
 TileSetData = [	tileset0, tileset1, tileset2 ];
@@ -21,7 +25,11 @@ var World = LevelLayout[| LevelCurrent];
 var WorldWidth = World[0];
 var WorldHeight = World[1];
 
+RoomScript = ScriptEmpty;
 ///Place doors
+DoorList = ds_list_create();
+EnemyList = ds_list_create();
+
 RoomLeft = false;
 RoomRight = false;
 RoomUp = false
@@ -42,9 +50,12 @@ if(Type == 0)
 	
 }
 
-if(Type == 1)
+if(Type == 1)	//Typical room
 {
-	
+	RoomScript = choose(
+		roomCentipedes,
+		roomTurrets,
+		);
 }
 
 if(Type == 2)

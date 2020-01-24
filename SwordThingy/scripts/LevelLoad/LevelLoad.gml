@@ -6,6 +6,7 @@ show_debug_message("Attempt load of level " + string (argument0));
 		
 LevelCurrent = argument0;
 ds_list_clear(LevelVisited);
+ds_list_clear(RoomObject);
 
 with(objRoom)
 	instance_destroy();

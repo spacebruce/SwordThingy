@@ -1,4 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-draw_rectangle(x, y, x + 32, y + 32, Open);
+Open = true;
+
+Collider = instance_create_depth(x, y, 0, objBlock32);
