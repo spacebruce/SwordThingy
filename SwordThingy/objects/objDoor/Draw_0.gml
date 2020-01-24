@@ -1,3 +1,3 @@
 /// @description Insert description here
 // You can write your code in this editor
-draw_rectangle(x, y, x + 64, y + 64, 1);
+draw_rectangle(x, y, x + 32, y + 32, 1);

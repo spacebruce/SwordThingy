@@ -24,9 +24,12 @@ var Size = 512;
 for(var i = 0; i < (Width * Height); ++i)
 {
 	var Type = Array[2 + i];
+	
+	var Room = noone;
+	ds_list_add(LevelVisited, Type == 2);	//Set visited flag if spawn room
 	if(Type > 0)
 	{
-		var Room = instance_create_depth(px * Size, py * Size, 0, objEmpty);
+		Room = instance_create_depth(px * Size, py * Size, 0, objEmpty);
 		
 		Room.RoomX = px;
 		Room.RoomY = py;
@@ -37,7 +40,6 @@ for(var i = 0; i < (Width * Height); ++i)
 	
 		with(Room)	instance_change(objRoom, true);
 	
-		ds_list_add(LevelVisited, Type == 2);	//Set visited flag if spawn room
 	
 		//show_debug_message("R: "+ string(px)+","+string(py)+" : "+ string(Type));
 		switch(Type)
@@ -52,6 +54,9 @@ for(var i = 0; i < (Width * Height); ++i)
 		break;
 		}
 	}
+	
+	ds_list_add(RoomObject, Room);
+	
 	++px;	
 	if(px == Width)
 	{

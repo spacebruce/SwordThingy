@@ -9,12 +9,13 @@ Finished = false;
 TileSetData = [	tileset0, tileset1, tileset2 ];
 TileSet = TileSetData[Level];
 
-var Left = x + 64;
-var Right = (x + Size) - 64;
-var Top = y + 64;
-var Bottom = (y + Size) - 64;
-var MiddleX = x + (Size / 2);
-var MiddleY = y + (Size / 2);
+Border = 32;
+Left = x + Border;
+Right = (x + Size) - Border;
+Top = y + Border;
+Bottom = (y + Size) - Border;
+MiddleX = x + (Size / 2);
+MiddleY = y + (Size / 2);
 
 var World = LevelLayout[| LevelCurrent];
 var WorldWidth = World[0];
@@ -34,10 +35,7 @@ if(RoomY > 0)
 if(RoomY < (WorldHeight - 1))
 	RoomDown = (World[2 + (RoomIndex + WorldWidth)] > 0);
 
-if(RoomLeft)	instance_create_depth(x, MiddleY - 32, 0, objDoor);
-if(RoomRight)	instance_create_depth(Right, MiddleY - 32, 0, objDoor);
-if(RoomUp)		instance_create_depth(MiddleX - 32, y, 0, objDoor);
-if(RoomDown)	instance_create_depth(MiddleX - 32, Bottom, 0, objDoor);
+RoomCreateWalls(RoomLeft, RoomRight, RoomUp, RoomDown);
 
 if(Type == 0)
 {

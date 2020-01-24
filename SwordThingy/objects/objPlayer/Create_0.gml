@@ -2,6 +2,7 @@
 RoomX = 0;
 RoomY = 0;
 RoomSlot = 0;
+RoomObj = noone;
 
 HurtFrames = -1;
 

@@ -109,5 +109,7 @@ if(x != xprevious || y != yprevious)
 	RoomY = floor(y / 512);
 	var Array = LevelLayout[| Level];
 	RoomSlot = (RoomY * Array[0]) + RoomX;
+	RoomObj = RoomGetObject(RoomX, RoomY);
+	
 	LevelVisited[| RoomSlot] = true;
 }

@@ -9,6 +9,10 @@ matrix_set(matrix_world, matrix_build(x, y, 0, 0, 0, 0, 1.0, 1.0, 1.0));
 
 with(objPlayer)
 {
+	var Array = LevelLayout[| Level];
+	var RoomWidth = Array[0];
+	var RoomHeight = Array[1];
+	
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_top);
 	draw_set_font(fntHUD);
@@ -38,16 +42,13 @@ with(objPlayer)
 	
 	if(Level >= 0 || Level < ds_list_size(LevelLayout))
 	{
-		var Array = LevelLayout[| Level];
 		var Size = 16;
-		var Width = Array[0];
-		var Height = Array[1];
-		var OffsetX = ScreenWidth - Size * Width;
-		var OffsetY = ScreenHeight - Size * Height;
+		var OffsetX = ScreenWidth - Size * RoomWidth;
+		var OffsetY = ScreenHeight - Size * RoomHeight;
 		var px = 0, py = 0;
 		
 		draw_rectangle_colour(OffsetX, OffsetY, ScreenWidth, ScreenHeight, c_black, c_black, c_black, c_black, 0);
-		for(var i = 0; i < (Width * Height); ++i)
+		for(var i = 0; i < (RoomWidth * RoomHeight); ++i)
 		{
 			var col = c_black;
 			if(LevelVisited[| i])
@@ -62,7 +63,7 @@ with(objPlayer)
 				draw_rectangle_colour(OffsetX + (px * Size), OffsetY + (py * Size), OffsetX + ((px + 1) * Size), OffsetY + ((py + 1) * Size), col, col, col, col, 0);
 			}
 			++px;
-			if(px == Width)	{	px = 0; ++py;	}
+			if(px == RoomWidth)	{	px = 0; ++py;	}
 		}
 		
 		draw_circle_colour(OffsetX + (x / (512 / 16)), OffsetY + (y / (512 / 16)), 2, c_blue, c_green, 0);
@@ -72,7 +73,13 @@ with(objPlayer)
 	draw_set_halign(fa_right);
 	draw_set_valign(fa_bottom);
 	var t = "Rm : " + string(RoomX) + "x" + string(RoomY) + " ("+ string_format(RoomSlot,2,0) + ")";
-	DrawTextOutline(t, ScreenWidth, OffsetY);
+	
+	if(RoomObj != noone)
+	{
+		//var rm = RoomGetObject(x, y);
+		t += "\n inst."+string(RoomObj);
+	}
+	DrawTextOutline(t, ScreenWidth, OffsetY - 12);
 }
 
 matrix_set(matrix_world, matrix_build_identity());

@@ -4,10 +4,11 @@ if(instance_number(objMain) > 1)
 	instance_destroy();
 
 LevelDefine();
-globalvar Level, LevelCurrent, LevelVisited;
+globalvar Level, LevelCurrent, LevelVisited, RoomObject;
 Level = 0;
 LevelCurrent = 0;
 LevelVisited = ds_list_create();
+RoomObject = ds_list_create();
 
 globalvar Score, Lives;
 Score = 0;
