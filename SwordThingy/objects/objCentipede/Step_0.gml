@@ -45,8 +45,11 @@ if(!SpottedPlayer)
 		NodeTarget = instance_find(objCentipedePatrol, irandom(instance_number(objCentipedePatrol) - 1));
 	}
 	NodeBored -= 1 / room_speed;
-	TargetX = NodeTarget.x;
-	TargetY = NodeTarget.y;
+	if(instance_exists(NodeTarget))
+	{
+		TargetX = NodeTarget.x;
+		TargetY = NodeTarget.y;
+	}
 }
 
 var TargetDir = point_direction(x, y, TargetX, TargetY)

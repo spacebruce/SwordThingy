@@ -22,6 +22,10 @@ NodeTarget = noone;
 TargetX = 0;
 TargetY = 0;
 
+ConeLX = x;
+ConeLY = y;
+ConeRX = x;
+ConeRY = y;
 
 ///Create Chain
 Diameter = sprite_get_width(sprCentipede);	//32, prolly

@@ -30,7 +30,7 @@ for(var i = 0; i < (Width * Height); ++i)
 	ds_list_add(LevelVisited, Type == 2);	//Set visited flag if spawn room
 	if(Type > 0)
 	{
-		Room = instance_create_depth(px * Size, py * Size, 0, objEmpty);
+		Room = instance_create_layer(px * Size, py * Size, "Floor", objEmpty);
 		
 		Room.RoomX = px;
 		Room.RoomY = py;

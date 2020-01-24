@@ -1,14 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+var frame = 1;
 if(HurtFrames > 0 || AlreadyDead)
 {
-	shader_set(shdFlash);
+	frame = 2;
 }
 
-draw_sprite(sprCentipede, 1, x, y);
 
-if(HurtFrames > 0 || AlreadyDead)
-{
-	shader_reset();
-}
+draw_sprite(sprCentipede, frame, x, y);
