@@ -9,7 +9,7 @@ matrix_set(matrix_world, matrix_build(x, y, 0, 0, 0, 0, 1.0, 1.0, 1.0));
 
 with(objPlayer)
 {
-	var Array = LevelLayout[| Level];
+	var Array = LevelLayout[| LevelCurrent];
 	var RoomWidth = Array[0];
 	var RoomHeight = Array[1];
 	
@@ -40,13 +40,12 @@ with(objPlayer)
 		DrawTextOutline(str, 48, ScreenHeight);
 	}
 	
-	if(Level >= 0 || Level < ds_list_size(LevelLayout))
+	var Size = 16
+	var OffsetX = ScreenWidth - ((Size * RoomWidth) * (other.MapVisible));
+	var OffsetY = ScreenHeight - Size * RoomHeight;
+	if (other.MapVisible > 0)
 	{
-		var Size = 16;
-		var OffsetX = ScreenWidth - Size * RoomWidth;
-		var OffsetY = ScreenHeight - Size * RoomHeight;
 		var px = 0, py = 0;
-		
 		draw_rectangle_colour(OffsetX, OffsetY, ScreenWidth, ScreenHeight, c_black, c_black, c_black, c_black, 0);
 		for(var i = 0; i < (RoomWidth * RoomHeight); ++i)
 		{
@@ -79,6 +78,7 @@ with(objPlayer)
 		//var rm = RoomGetObject(x, y);
 		t += "\n inst."+string(RoomObj);
 	}
+	t += "\n" + string(other.MapVisible);
 	DrawTextOutline(t, ScreenWidth, OffsetY - 12);
 }
 
