@@ -375,6 +375,14 @@
             }
         },
         {
+            "Key": "6083d372-21b3-4a8d-9e40-90642581c76e",
+            "Value": {
+                "id": "b6733921-bf31-4c03-ba25-9f4f25c89b9c",
+                "resourcePath": "sprites\\sprDude\\sprDude.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6601e3b6-797b-42f7-862c-7e5373c9a32d",
             "Value": {
                 "id": "b70c6d7e-de4a-4f74-b08a-eb853376fbd0",
