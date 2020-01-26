@@ -69,3 +69,21 @@ if(Type == 3)
 {
 	RoomScript = roomBoss;
 }
+
+
+var Disrepair = Level * 5;
+var wid = sprite_get_width(sprFloorTile);
+FloorGrid = ds_grid_create(Size / wid, Size / wid);
+ds_grid_clear(FloorGrid, true);
+
+for(var iy = 0; iy < Size / wid; ++iy)
+{
+	for(var ix = 0; ix < Size / wid; ++ix)
+	{
+		if(random(100) < Disrepair)
+		{
+			FloorGrid[# ix, iy] = false;	
+		}
+		//draw_sprite(sprFloorTile, 0, x + (ix * wid), y + (iy * wid));
+	}
+}

@@ -1,11 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
-Killed = false;
-Value = 5;
-Damage = 0;
 
-Frame = 0;
 
-image_speed = 0;
+if(Speed > 0)
+{
+	image_index += Speed / 5;	
+}
 
-Speed = 0;
+if(image_index > 3.5)
+	image_index = 0;
