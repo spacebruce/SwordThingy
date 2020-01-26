@@ -13,16 +13,22 @@ case ScriptState.Begin:
 			MiddleY + lengthdir_y(150, i + 45),
 			0, objCentipedePatrol);
 			
-		//ds_list_add(EnemyList,	
-			instance_create_depth(
-				MiddleX + lengthdir_x(100, i),
-				MiddleY + lengthdir_y(100, i),
-				0, objCentipede
-			)
-		//);
-	}
+		var pede = instance_create_depth(
+			MiddleX + lengthdir_x(100, i),
+			MiddleY + lengthdir_y(100, i),
+			0, objCentipede
+		)
+		pede.direction = i + 90;
 		
+	}
 	
+	for(var i = -64; i < 64; i += 8)
+	{
+		instance_create_depth(Left + 120, MiddleY - i, 0, objEnemyDude);
+		instance_create_depth(Right - 120, MiddleY - i, 0, objEnemyDude);
+		instance_create_depth(MiddleX - i, y + 120, 0, objEnemyDude);
+		instance_create_depth(MiddleX - i, Bottom - 120, 0, objEnemyDude);
+	}	
 break;
 case ScriptState.Tick:
 	//track enemy deaths

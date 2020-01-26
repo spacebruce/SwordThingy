@@ -6,7 +6,9 @@ Killed = false;
 Health = 100;
 HurtFrames = -1;
 
-direction = random_range(-360, 360);
+if(direction == 0)
+	direction = random_range(-360, 360);
+
 spd = 0.0;
 
 ///AI
