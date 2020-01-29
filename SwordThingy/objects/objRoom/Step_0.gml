@@ -5,7 +5,7 @@ if(!Active && instance_exists(objPlayer))
 {
 	var nearestDoor = instance_nearest(objPlayer.x, objPlayer.y, objDoor);
 	Active = (objPlayer.x >= x && objPlayer.y >= y && objPlayer.x < x + Size && objPlayer.y < y + Size)
-		&& (point_distance(nearestDoor.x, nearestDoor.y, objPlayer.x, objPlayer.y) > 48);
+		&& (point_distance(nearestDoor.x + 16, nearestDoor.y + 16, objPlayer.x, objPlayer.y) > 40);
 		
 	//Don't activate if player too close to a door
 }

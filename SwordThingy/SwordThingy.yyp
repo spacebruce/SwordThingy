@@ -655,6 +655,14 @@
             }
         },
         {
+            "Key": "b2fafdbc-e1c7-4e68-9555-719cfdfa3e6e",
+            "Value": {
+                "id": "6e5674d7-2115-429f-9e63-387f1621b078",
+                "resourcePath": "objects\\objPartyHard\\objPartyHard.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b3b173ee-72f1-45df-9698-cc28797c6d77",
             "Value": {
                 "id": "adfb5a5e-7077-4259-8840-697a19ec5d60",
