@@ -37,6 +37,7 @@ pause_surface = surface_create(ScreenWidth, ScreenHeight);
 CameraX = 0;
 CameraY = 0;
 CameraTween = 0.0;
+CameraReset = true;
 
 instance_create_layer(0, 0, "Hud", objMainMenu);
 instance_create_layer(0, 0, "Hud", objHud);
