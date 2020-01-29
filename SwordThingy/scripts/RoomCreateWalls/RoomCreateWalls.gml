@@ -8,7 +8,7 @@ var RoomDown = argument3;
 */
 
 var position = 0;
-repeat(Size / 32)
+repeat(RoomSize / 32)
 {
 	instance_create_depth(x + position, y, 0, objBlock32);
 	instance_create_depth(x + position, Bottom, 0, objBlock32);

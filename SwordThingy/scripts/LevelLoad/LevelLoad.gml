@@ -21,7 +21,8 @@ var Height = Array[1];
 var px = 0;
 var py = 0;
 
-var Size = 512;
+globalvar RoomSize;
+RoomSize = 512 * 1.5;
 for(var i = 0; i < (Width * Height); ++i)
 {
 	var Type = Array[2 + i];
@@ -30,13 +31,13 @@ for(var i = 0; i < (Width * Height); ++i)
 	ds_list_add(LevelVisited, Type == 2);	//Set visited flag if spawn room
 	if(Type > 0)
 	{
-		Room = instance_create_layer(px * Size, py * Size, "Floor", objEmpty);
+		Room = instance_create_layer(px * RoomSize, py * RoomSize, "Floor", objEmpty);
 		
 		Room.RoomX = px;
 		Room.RoomY = py;
 		Room.RoomIndex = i;
 	
-		Room.Size = Size;
+		Room.Size = RoomSize;
 		Room.Type = Type;
 	
 		with(Room)	instance_change(objRoom, true);
@@ -75,4 +76,6 @@ if(instance_exists(objPlayerSpawn))
 	}
 	objMain.PlayerX = objPlayerSpawn.x
 	objMain.PlayerY = objPlayerSpawn.y;
+	
+	objMain.CameraReset = true;
 }

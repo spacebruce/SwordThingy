@@ -111,8 +111,8 @@ if(PickupTimer <= 0)
 ///Current Room
 if(x != xprevious || y != yprevious)
 {
-	RoomX = floor(x / 512);
-	RoomY = floor(y / 512);
+	RoomX = floor(x / RoomSize);
+	RoomY = floor(y / RoomSize);
 	var Array = LevelLayout[| Level];
 	RoomSlot = (RoomY * Array[0]) + RoomX;
 	RoomObj = RoomGetObject(RoomX, RoomY);
