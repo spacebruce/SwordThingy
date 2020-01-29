@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+z = 400;
+
 Value = 400;
 Damage = 10;
 Killed = false;

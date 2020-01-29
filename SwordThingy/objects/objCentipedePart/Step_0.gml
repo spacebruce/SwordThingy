@@ -21,4 +21,5 @@ else	//If parent exists, follow it
 	var angle = point_direction(Parent.x, Parent.y, x, y);
 	x = Parent.x + lengthdir_x(Diameter, angle);
 	y = Parent.y + lengthdir_y(Diameter, angle);
+	z = Parent.z;
 }

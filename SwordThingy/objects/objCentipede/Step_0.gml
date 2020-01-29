@@ -1,5 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
+if (z > 0)
+{
+	z -= 4;
+	return;
+}
+
 HurtFrames -= 1 / room_speed;
 SpottedTimeout -= 1 / room_speed;
 

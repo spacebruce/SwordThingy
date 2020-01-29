@@ -8,4 +8,4 @@ if(HurtFrames > 0 || AlreadyDead)
 }
 
 
-draw_sprite(sprCentipede, frame, x, y);
+draw_sprite(sprCentipede, frame, x, y - z);

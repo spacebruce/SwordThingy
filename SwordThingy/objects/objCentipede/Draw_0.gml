@@ -10,4 +10,4 @@ if(HurtFrames > 0)
 draw_triangle(x, y, ConeLX, ConeLY, ConeRX, ConeRY, 1);
 draw_line(x, y, TargetX, TargetY);
 
-draw_sprite(sprCentipede, frame, x, y);
+draw_sprite(sprCentipede, frame, x, y - z);

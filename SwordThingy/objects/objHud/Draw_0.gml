@@ -65,7 +65,7 @@ with(objPlayer)
 			if(px == RoomWidth)	{	px = 0; ++py;	}
 		}
 		
-		draw_circle_colour(OffsetX + (x / (512 / 16)), OffsetY + (y / (512 / 16)), 2, c_blue, c_green, 0);
+		draw_circle_colour(OffsetX + (x / (RoomSize / 16)), OffsetY + (y / (RoomSize / 16)), 2, c_blue, c_green, 0);
 	}
 	
 	draw_set_font(fntPopup);
