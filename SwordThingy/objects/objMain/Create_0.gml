@@ -3,6 +3,8 @@
 if(instance_number(objMain) > 1)
 	instance_destroy();
 
+DebugInit();
+
 LevelDefine();
 globalvar Level, LevelCurrent, LevelVisited, RoomObject;
 Level = 0;

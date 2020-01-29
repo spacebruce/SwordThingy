@@ -82,4 +82,16 @@ with(objPlayer)
 	DrawTextOutline(t, ScreenWidth, OffsetY - 12);
 }
 
+if(DebugMode)
+{
+	draw_set_valign(fa_bottom);
+	draw_set_halign(fa_left);
+	var t = "";
+	for(var i = 0; i < min(BacklogSize, ds_list_size(DebugLog)); ++i)
+	{
+		t += "\n" + string(DebugLog[| ds_list_size(DebugLog) - (i + 1)]);
+	}
+	DrawTextOutline(t, 0, ScreenHeight);
+}
+
 matrix_set(matrix_world, matrix_build_identity());

@@ -4,3 +4,5 @@
 BaseX = xstart;
 BaseY = ystart;
 Timer = 0;
+
+visible = DebugMode;

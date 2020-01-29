@@ -3,5 +3,5 @@ if(object_index != objRoom)
 	
 if(argument0 == ScriptState.Begin)
 {
-	show_debug_message("SPAWN THE GUNS.");
+	DebugPrint("SPAWN THE GUNS.");
 }

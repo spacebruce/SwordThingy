@@ -14,7 +14,7 @@ if(State == RoomState.Unexplored)
 {
 	if(Active)
 	{
-		show_debug_message(string(id) + " ACTIVATED");
+		DebugPrint("Room " + string(id) + " Activated");
 		for(var i = 0; i < ds_list_size(DoorList); ++i)
 		{
 			var obj = DoorList[| i];
@@ -35,7 +35,7 @@ if(State == RoomState.Completed)
 	if(StateLast != State)
 	{
 		Active = false;
-		show_debug_message(string(id) + " DEACTIVATED");
+		DebugPrint("Room " + string(id) + " Deactivated");
 		script_execute(RoomScript, ScriptState.End);
 		for(var i = 0; i < ds_list_size(DoorList); ++i)
 		{

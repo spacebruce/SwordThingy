@@ -34,7 +34,6 @@ if gamepad_is_connected(0)
 	{
 		Horizontal = padHor;
 		Vertical = padVer;
-		show_debug_message(string(padHor) + ", " + string(padVer));
 	}
 	var ShootHor = gamepad_axis_value(0, gp_axisrh);
 	var ShootVer = gamepad_axis_value(0, gp_axisrv);

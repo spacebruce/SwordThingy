@@ -1,6 +1,6 @@
 ///LevelBegin(level num);
 
-show_debug_message("Attempt load of level " + string (argument0));
+DebugPrint("Attempt load of level #" + string (argument0));
 ///Hack to get around dead player bug
 ++Lives;
 		
@@ -42,8 +42,6 @@ for(var i = 0; i < (Width * Height); ++i)
 	
 		with(Room)	instance_change(objRoom, true);
 	
-	
-		//show_debug_message("R: "+ string(px)+","+string(py)+" : "+ string(Type));
 		switch(Type)
 		{
 		case 1:	//Normal

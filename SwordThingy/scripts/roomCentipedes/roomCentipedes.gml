@@ -4,7 +4,7 @@ if(object_index != objRoom)
 switch(argument0)
 {
 case ScriptState.Begin:
-	show_debug_message("SPAWN THE CENTIPEDES.");
+	DebugPrint("SPAWN THE CENTIPEDES.");
 	
 	for(var i = 0; i < 360; i += 90)
 	{
