@@ -22,7 +22,7 @@ var px = 0;
 var py = 0;
 
 globalvar RoomSize;
-RoomSize = 512 * 1.5;
+RoomSize = 640;
 for(var i = 0; i < (Width * Height); ++i)
 {
 	var Type = Array[2 + i];

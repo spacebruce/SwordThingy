@@ -263,6 +263,14 @@
             }
         },
         {
+            "Key": "43876979-7ebf-4fca-8d7c-56011d55bc1f",
+            "Value": {
+                "id": "4be2a3e3-188b-4cf9-90e1-d03c46415f50",
+                "resourcePath": "sprites\\sprWallTile\\sprWallTile.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "44c337c4-9880-4c3b-a4be-187b42b72325",
             "Value": {
                 "id": "01ba9209-e9ec-4cc9-80e2-51e145895230",
@@ -580,6 +588,14 @@
                 "id": "7ecbb9ed-b383-4594-b667-e12bee3d4073",
                 "resourcePath": "options\\linux\\options_linux.yy",
                 "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
+            "Key": "a98558cb-d424-440c-8e73-a00d5381cc31",
+            "Value": {
+                "id": "38bcd1e1-b66f-4e71-bfe0-597b243f2520",
+                "resourcePath": "sprites\\sprDoor\\sprDoor.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

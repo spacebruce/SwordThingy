@@ -11,6 +11,20 @@ for(var iy = 0; iy < Size / wid; ++iy)
 	}
 }
 
+for(var i = 1; i < ((Size / 32) - 1); ++i)
+{
+	draw_sprite(sprWallTile, 0, x + (i * 32), y);
+	draw_sprite(sprWallTile, 3, x + (i * 32), y + (Size - 32));
+	draw_sprite(sprWallTile, 1, x, y + (i * 32));
+	draw_sprite(sprWallTile, 2, x + (Size - 32), y + (i * 32));
+}
+draw_sprite(sprWallTile, 4, x, y);
+draw_sprite(sprWallTile, 5, x + (Size - 32), y);
+draw_sprite(sprWallTile, 6, x + (Size - 32), y + (Size - 32));
+draw_sprite(sprWallTile, 7, x, y + (Size - 32));
+
+
+
 //draw_rectangle_color(x, y, x + Size, y + Size, c_gray, c_gray, c_gray, c_gray, 0);
 
 draw_set_halign(fa_left);

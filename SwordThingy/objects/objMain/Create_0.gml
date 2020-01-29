@@ -27,8 +27,8 @@ MenuBoredTimer = -1;	//How long until this gets bored and resets game
 
 globalvar ScreenScale, ScreenWidth, ScreenHeight;
 ScreenScale = 2;
-ScreenWidth = 1920 / 3;
-ScreenHeight = 1080 / 3;
+ScreenWidth = 640;
+ScreenHeight = 360;
 
 window_set_size(ScreenWidth * ScreenScale, ScreenHeight * ScreenScale);
 surface_resize(application_surface, ScreenWidth, ScreenHeight);
