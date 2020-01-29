@@ -9,27 +9,26 @@ if(CameraReset)
 
 if(instance_exists(objPlayer))
 {
-	var Room = objPlayer.RoomObj;
-	
-	CameraTween = min(CameraTween + (1 / room_speed), 1.0);
 	PlayerX = objPlayer.x;	//keep track of player position while it's alive
 	PlayerY = objPlayer.y;
 	
-	var ClampX = objPlayer.x - ScreenWidth / 2;
-	var ClampY = objPlayer.y - ScreenHeight / 2;
-	
-	if(instance_exists(Room))
-	{
-		ClampX = clamp(ClampX, Room.x, Room.x + (RoomSize - ScreenWidth));
-		ClampY = clamp(ClampY, Room.y, Room.y + (RoomSize - ScreenHeight));
+	if(instance_exists(objPlayer.RoomObj))
+	{	
+		PlayerRoomObj = objPlayer.RoomObj;
 	}
 	
-	CameraX = lerp(CameraX, ClampX, CameraTween);
-	CameraY = lerp(CameraY, ClampY, CameraTween);
-}
-else
-{
-	CameraTween = 0.0;
+	var ClampX = CameraX;
+	var ClampY = CameraY;
+	
+	if(instance_exists(PlayerRoomObj))
+	{
+		
+		ClampX = clamp(objPlayer.x - ScreenWidth / 2, PlayerRoomObj.x, PlayerRoomObj.x + (RoomSize - ScreenWidth));
+		ClampY = clamp(objPlayer.y - ScreenHeight / 2, PlayerRoomObj.y, PlayerRoomObj.y + (RoomSize - ScreenHeight));
+	}
+	
+	CameraX = lerp(CameraX, ClampX, 0.25);
+	CameraY = lerp(CameraY, ClampY, 0.25);
 }
 
 camera_set_view_size(view_camera[0], ScreenWidth, ScreenHeight);

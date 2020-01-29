@@ -19,6 +19,7 @@ Paused = false;
 PausedLast = false;
 PausedDraw = -1;
 
+PlayerRoomObj = noone;
 PlayerRespawn = -1;
 PlayerX = 0;//objPlayerSpawn.x;
 PlayerY = 0;//objPlayerSpawn.y;
