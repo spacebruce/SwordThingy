@@ -1,11 +1,30 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-draw_set_halign(fa_center);
-draw_text(x, y, "Insert Boss here!");
+var vscale = 1.5;
+var spr = sprBoss1;
 
-if(keyboard_check_pressed(vk_space))
+var num = sprite_get_number(spr);
+var shade = c_gray;
+for(var i = 0; i < num; ++i)
 {
-	Killed = true;
-	instance_destroy();
+	shade = merge_colour(c_gray, c_white, i / num);
+	draw_sprite_ext(spr, num - i, x, y - (i * vscale) + 1 , 2.0, 2.0, image_angle, shade, 1.0);
+	draw_sprite_ext(spr, num - i, x, y - (i * vscale), 2.0, 2.0, image_angle, shade, 1.0);
+	draw_sprite_ext(spr, num - i, x + 1, y - (i * vscale) + 1 , 2.0, 2.0, image_angle, shade, 1.0);
+	draw_sprite_ext(spr, num - i, x + 1, y - (i * vscale), 2.0, 2.0, image_angle, shade, 1.0);
+	
+	if(i < sprite_get_number(sprBoss1Tracks))
+	{
+		var off = 2 * (38 / 2);
+		draw_sprite_ext(sprBoss1Tracks, i,
+			x + lengthdir_x(off, image_angle),
+			(y - (i * vscale)) + lengthdir_y(off, image_angle), 
+			2, 2, image_angle, shade, 1.0);
+			
+		draw_sprite_ext(sprBoss1Tracks, i,
+			x - lengthdir_x(off, image_angle),
+			(y - (i * vscale)) - lengthdir_y(off, image_angle), 
+			2, 2, image_angle, shade, 1.0);
+	}
 }

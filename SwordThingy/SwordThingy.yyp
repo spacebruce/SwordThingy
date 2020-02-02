@@ -199,6 +199,14 @@
             }
         },
         {
+            "Key": "33db82fb-5f4a-4b1c-ae3d-c4815f9c21ba",
+            "Value": {
+                "id": "62ae8c6a-5036-4227-9acd-c842d551eb03",
+                "resourcePath": "objects\\objDemoRender\\objDemoRender.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "342f4532-f05d-478c-be4a-1ea040aa4a55",
             "Value": {
                 "id": "be0c0de8-146d-4836-b4d4-f4ab53f010a9",
@@ -455,6 +463,14 @@
             }
         },
         {
+            "Key": "6b0b37d8-24cc-42f7-a448-2188df768ce8",
+            "Value": {
+                "id": "c97b2cd8-2d14-4d09-81e7-6062a2b4557a",
+                "resourcePath": "sprites\\sprBoss1\\sprBoss1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6ba9a5f6-2da4-42cd-8a0a-e2add30d9479",
             "Value": {
                 "id": "23d05eb6-8bc6-4c22-b040-26e1eb11b690",
@@ -556,6 +572,14 @@
                 "id": "105b263f-0da9-4e09-8024-c72eff82959e",
                 "resourcePath": "scripts\\roomTurrets\\roomTurrets.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a4e03097-cd8b-4694-99ca-3c740b4db2ac",
+            "Value": {
+                "id": "ea90fd73-1ed3-4978-ab2f-3109f37966d6",
+                "resourcePath": "sprites\\sprBoss1Tracks\\sprBoss1Tracks.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

@@ -7,7 +7,7 @@ ds_list_add(LevelLayout,	[
 	0,0,0,0,3,
 	0,0,1,1,1,
 	0,0,1,0,1,
-	0,2,1,1,1,
+	3,2,1,1,1,
 ]);
 
 ds_list_add(LevelLayout,	[
