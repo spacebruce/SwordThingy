@@ -23,8 +23,6 @@ draw_sprite(sprWallTile, 5, x + (Size - 32), y);
 draw_sprite(sprWallTile, 6, x + (Size - 32), y + (Size - 32));
 draw_sprite(sprWallTile, 7, x, y + (Size - 32));
 
-
-
 //draw_rectangle_color(x, y, x + Size, y + Size, c_gray, c_gray, c_gray, c_gray, 0);
 
 draw_set_halign(fa_left);

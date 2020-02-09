@@ -9,10 +9,10 @@ var shade = c_gray;
 for(var i = 0; i < num; ++i)
 {
 	shade = merge_colour(c_gray, c_white, i / num);
-	draw_sprite_ext(spr, num - i, x, y - (i * vscale) + 1 , 2.0, 2.0, image_angle, shade, 1.0);
-	draw_sprite_ext(spr, num - i, x, y - (i * vscale), 2.0, 2.0, image_angle, shade, 1.0);
-	draw_sprite_ext(spr, num - i, x + 1, y - (i * vscale) + 1 , 2.0, 2.0, image_angle, shade, 1.0);
-	draw_sprite_ext(spr, num - i, x + 1, y - (i * vscale), 2.0, 2.0, image_angle, shade, 1.0);
+	draw_sprite_ext(spr, num - i, x, (y - 2) -(i * vscale) + 1 , 2.0, 2.0, image_angle, shade, 1.0);
+	draw_sprite_ext(spr, num - i, x, (y - 2) - (i * vscale), 2.0, 2.0, image_angle, shade, 1.0);
+	draw_sprite_ext(spr, num - i, x + 1, (y - 2) - (i * vscale) + 1 , 2.0, 2.0, image_angle, shade, 1.0);
+	draw_sprite_ext(spr, num - i, x + 1, (y - 2) - (i * vscale), 2.0, 2.0, image_angle, shade, 1.0);
 	
 	if(i < sprite_get_number(sprBoss1Tracks))
 	{
